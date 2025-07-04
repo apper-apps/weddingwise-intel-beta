@@ -12,7 +12,6 @@ import Tasks from '@/components/pages/Tasks'
 function App() {
   return (
     <div className="min-h-screen bg-background">
-      <Routes>
 <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/timeline" element={<Timeline />} />
@@ -22,7 +21,6 @@ function App() {
           <Route path="/vendors" element={<Vendors />} />
           <Route path="/tasks" element={<Tasks />} />
         </Routes>
-      </Routes>
       <ToastContainer
         position="top-right"
         autoClose={3000}
