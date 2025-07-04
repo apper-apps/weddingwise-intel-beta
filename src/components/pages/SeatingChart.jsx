@@ -29,13 +29,20 @@ const SeatingChart = () => {
     return () => window.removeEventListener('resize', updateCanvasSize)
   }, [])
 
-  const updateCanvasSize = () => {
+const updateCanvasSize = () => {
     const container = canvasRef.current?.parentElement
-    if (container) {
+    if (container && canvasRef.current) {
       const rect = container.getBoundingClientRect()
-      const width = Math.min(rect.width - 48, 1200)
-      const height = Math.min(width * 0.75, 800)
-      setCanvasSize({ width, height })
+      const width = Math.max(Math.min(rect.width - 48, 1200), 400) // Minimum 400px width
+      const height = Math.max(Math.min(width * 0.75, 800), 300) // Minimum 300px height
+      
+      // Ensure canvas has valid dimensions before setting
+      if (width > 0 && height > 0) {
+        setCanvasSize({ width, height })
+        // Update canvas element dimensions immediately
+        canvasRef.current.width = width
+        canvasRef.current.height = height
+      }
     }
   }
 
@@ -261,18 +268,46 @@ const SeatingChart = () => {
     }))
   }
 
-  const handleExportPDF = () => {
+const handleExportPDF = () => {
     try {
-      const pdf = new jsPDF('landscape', 'mm', 'a4')
       const canvas = canvasRef.current
+      
+      // Validate canvas exists and has proper dimensions
+      if (!canvas) {
+        toast.error('Canvas not found - please wait for the chart to load')
+        return
+      }
+      
+      if (canvas.width === 0 || canvas.height === 0) {
+        toast.error('Canvas not properly sized - please wait for the chart to render')
+        return
+      }
+      
+      // Ensure canvas has been drawn to
+      const ctx = canvas.getContext('2d')
+      if (!ctx) {
+        toast.error('Unable to access canvas context')
+        return
+      }
+      
+      const pdf = new jsPDF('landscape', 'mm', 'a4')
       
       // Add title
       pdf.setFontSize(20)
       pdf.text('Wedding Seating Chart', 20, 20)
       
-      // Add canvas as image
-      const imgData = canvas.toDataURL('image/png')
-      pdf.addImage(imgData, 'PNG', 20, 30, 250, 180)
+      // Add canvas as image - with additional validation
+      try {
+        const imgData = canvas.toDataURL('image/png')
+        if (!imgData || imgData === 'data:,') {
+          throw new Error('Canvas is empty or not rendered')
+        }
+        pdf.addImage(imgData, 'PNG', 20, 30, 250, 180)
+      } catch (canvasError) {
+        console.error('Canvas export error:', canvasError)
+        toast.error('Failed to capture seating chart - please ensure the chart is fully loaded')
+        return
+      }
       
       // Add guest list
       pdf.addPage()
@@ -298,7 +333,8 @@ const SeatingChart = () => {
       pdf.save('wedding-seating-chart.pdf')
       toast.success('Seating chart exported to PDF')
     } catch (err) {
-      toast.error('Failed to export PDF')
+      console.error('PDF export error:', err)
+      toast.error(`Failed to export PDF: ${err.message || 'Unknown error'}`)
     }
   }
 
