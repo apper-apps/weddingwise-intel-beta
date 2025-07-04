@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "name": "Elegant Events Photography",
+    "category": "Photography",
+    "contact": "(555) 123-4567",
+    "email": "info@elegantevents.com",
+    "cost": 3500,
+    "depositPaid": true,
+    "balanceDue": 2000
+  },
+  {
+    "Id": 2,
+    "name": "Harmony Wedding Band",
+    "category": "Entertainment",
+    "contact": "(555) 234-5678",
+    "email": "bookings@harmonywedding.com",
+    "cost": 2800,
+    "depositPaid": true,
+    "balanceDue": 0
+  },
+  {
+    "Id": 3,
+    "name": "Bloom & Blossom Florists",
+    "category": "Flowers",
+    "contact": "(555) 345-6789",
+    "email": "orders@bloomblossom.com",
+    "cost": 1200,
+    "depositPaid": false,
+    "balanceDue": 1200
+  },
+  {
+    "Id": 4,
+    "name": "Sweet Dreams Bakery",
+    "category": "Catering",
+    "contact": "(555) 456-7890",
+    "email": "cakes@sweetdreams.com",
+    "cost": 800,
+    "depositPaid": true,
+    "balanceDue": 400
+  },
+  {
+    "Id": 5,
+    "name": "Premier Catering Services",
+    "category": "Catering",
+    "contact": "(555) 567-8901",
+    "email": "events@premiercatering.com",
+    "cost": 8500,
+    "depositPaid": true,
+    "balanceDue": 0
+  },
+  {
+    "Id": 6,
+    "name": "Luxury Limo Services",
+    "category": "Transportation",
+    "contact": "(555) 678-9012",
+    "email": "booking@luxurylimo.com",
+    "cost": 600,
+    "depositPaid": false,
+    "balanceDue": 600
+  }
+]

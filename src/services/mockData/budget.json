@@ -1,0 +1,66 @@
+[
+  {
+    "Id": 1,
+    "category": "Venue",
+    "vendor": "Rosewood Gardens",
+    "budgeted": 12000,
+    "actual": 12000,
+    "paid": true
+  },
+  {
+    "Id": 2,
+    "category": "Catering",
+    "vendor": "Premier Catering Services",
+    "budgeted": 8000,
+    "actual": 8500,
+    "paid": true
+  },
+  {
+    "Id": 3,
+    "category": "Photography",
+    "vendor": "Elegant Events Photography",
+    "budgeted": 3000,
+    "actual": 3500,
+    "paid": false
+  },
+  {
+    "Id": 4,
+    "category": "Entertainment",
+    "vendor": "Harmony Wedding Band",
+    "budgeted": 2500,
+    "actual": 2800,
+    "paid": true
+  },
+  {
+    "Id": 5,
+    "category": "Flowers",
+    "vendor": "Bloom & Blossom Florists",
+    "budgeted": 1500,
+    "actual": 1200,
+    "paid": false
+  },
+  {
+    "Id": 6,
+    "category": "Cake",
+    "vendor": "Sweet Dreams Bakery",
+    "budgeted": 800,
+    "actual": 800,
+    "paid": false
+  },
+  {
+    "Id": 7,
+    "category": "Transportation",
+    "vendor": "Luxury Limo Services",
+    "budgeted": 700,
+    "actual": 600,
+    "paid": false
+  },
+  {
+    "Id": 8,
+    "category": "Attire",
+    "vendor": "Various",
+    "budgeted": 2000,
+    "actual": 1800,
+    "paid": true
+  }
+]

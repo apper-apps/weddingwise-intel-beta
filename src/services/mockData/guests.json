@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "name": "Emily Johnson",
+    "email": "emily.johnson@email.com",
+    "phone": "(555) 123-4567",
+    "rsvpStatus": "Confirmed",
+    "plusOne": true,
+    "tableNumber": 1,
+    "dietaryRestrictions": "Vegetarian"
+  },
+  {
+    "Id": 2,
+    "name": "David Smith",
+    "email": "david.smith@email.com",
+    "phone": "(555) 234-5678",
+    "rsvpStatus": "Confirmed",
+    "plusOne": false,
+    "tableNumber": 2,
+    "dietaryRestrictions": ""
+  },
+  {
+    "Id": 3,
+    "name": "Jessica Wilson",
+    "email": "jessica.wilson@email.com",
+    "phone": "(555) 345-6789",
+    "rsvpStatus": "Pending",
+    "plusOne": true,
+    "tableNumber": null,
+    "dietaryRestrictions": "Gluten-free"
+  },
+  {
+    "Id": 4,
+    "name": "Robert Brown",
+    "email": "robert.brown@email.com",
+    "phone": "(555) 456-7890",
+    "rsvpStatus": "Confirmed",
+    "plusOne": true,
+    "tableNumber": 1,
+    "dietaryRestrictions": ""
+  },
+  {
+    "Id": 5,
+    "name": "Lisa Davis",
+    "email": "lisa.davis@email.com",
+    "phone": "(555) 567-8901",
+    "rsvpStatus": "Declined",
+    "plusOne": false,
+    "tableNumber": null,
+    "dietaryRestrictions": ""
+  },
+  {
+    "Id": 6,
+    "name": "Mark Thompson",
+    "email": "mark.thompson@email.com",
+    "phone": "(555) 678-9012",
+    "rsvpStatus": "Confirmed",
+    "plusOne": false,
+    "tableNumber": 3,
+    "dietaryRestrictions": "Dairy-free"
+  },
+  {
+    "Id": 7,
+    "name": "Amanda Garcia",
+    "email": "amanda.garcia@email.com",
+    "phone": "(555) 789-0123",
+    "rsvpStatus": "Pending",
+    "plusOne": true,
+    "tableNumber": null,
+    "dietaryRestrictions": ""
+  },
+  {
+    "Id": 8,
+    "name": "James Martinez",
+    "email": "james.martinez@email.com",
+    "phone": "(555) 890-1234",
+    "rsvpStatus": "Confirmed",
+    "plusOne": true,
+    "tableNumber": 2,
+    "dietaryRestrictions": "Nut allergy"
+  }
+]

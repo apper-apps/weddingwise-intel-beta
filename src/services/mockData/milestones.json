@@ -1,0 +1,58 @@
+[
+  {
+    "Id": 1,
+    "title": "Engagement",
+    "description": "The beginning of our journey together",
+    "date": "2023-12-15",
+    "status": "completed"
+  },
+  {
+    "Id": 2,
+    "title": "Venue Booked",
+    "description": "Secured our dream venue at Rosewood Gardens",
+    "date": "2024-01-20",
+    "status": "completed"
+  },
+  {
+    "Id": 3,
+    "title": "Save the Dates Sent",
+    "description": "Officially announced our wedding date to family and friends",
+    "date": "2024-02-14",
+    "status": "completed"
+  },
+  {
+    "Id": 4,
+    "title": "Vendor Contracts Signed",
+    "description": "Finalized agreements with key vendors",
+    "date": "2024-04-01",
+    "status": "in-progress"
+  },
+  {
+    "Id": 5,
+    "title": "Wedding Invitations Sent",
+    "description": "Formal invitations sent to all guests",
+    "date": "2024-06-15",
+    "status": "pending"
+  },
+  {
+    "Id": 6,
+    "title": "Final Venue Walkthrough",
+    "description": "Last-minute venue details and timeline confirmation",
+    "date": "2024-08-15",
+    "status": "pending"
+  },
+  {
+    "Id": 7,
+    "title": "Rehearsal Dinner",
+    "description": "Practice ceremony and celebration with wedding party",
+    "date": "2024-09-14",
+    "status": "pending"
+  },
+  {
+    "Id": 8,
+    "title": "Wedding Day",
+    "description": "Our special day - getting married!",
+    "date": "2024-09-15",
+    "status": "pending"
+  }
+]
