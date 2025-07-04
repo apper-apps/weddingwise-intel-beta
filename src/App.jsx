@@ -4,6 +4,7 @@ import Layout from '@/components/organisms/Layout'
 import Dashboard from '@/components/pages/Dashboard'
 import Timeline from '@/components/pages/Timeline'
 import Budget from '@/components/pages/Budget'
+import SeatingChart from '@/components/pages/SeatingChart'
 import Guests from '@/components/pages/Guests'
 import Vendors from '@/components/pages/Vendors'
 import Tasks from '@/components/pages/Tasks'
@@ -12,14 +13,15 @@ function App() {
   return (
     <div className="min-h-screen bg-background">
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="timeline" element={<Timeline />} />
-          <Route path="budget" element={<Budget />} />
-          <Route path="guests" element={<Guests />} />
-          <Route path="vendors" element={<Vendors />} />
-          <Route path="tasks" element={<Tasks />} />
-        </Route>
+<Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/timeline" element={<Timeline />} />
+          <Route path="/budget" element={<Budget />} />
+          <Route path="/guests" element={<Guests />} />
+          <Route path="/guests/seating-chart" element={<SeatingChart />} />
+          <Route path="/vendors" element={<Vendors />} />
+          <Route path="/tasks" element={<Tasks />} />
+        </Routes>
       </Routes>
       <ToastContainer
         position="top-right"

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
@@ -11,6 +12,7 @@ import Empty from '@/components/ui/Empty'
 import { getGuests, updateGuest, deleteGuest } from '@/services/api/guestService'
 
 const Guests = () => {
+  const navigate = useNavigate()
   const [guests, setGuests] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
@@ -51,10 +53,13 @@ const Guests = () => {
     }
   }
   
-  const handleAddGuest = () => {
+const handleAddGuest = () => {
     toast.info('Add guest form would open here')
   }
   
+  const handleSeatingChart = () => {
+    navigate('/guests/seating-chart')
+  }
   if (loading) return <Loading type="table" />
   if (error) return <Error message={error} onRetry={loadGuests} />
   
@@ -69,15 +74,25 @@ const Guests = () => {
       className="space-y-8"
     >
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-3xl font-bold font-display text-gray-900">Guest List</h1>
           <p className="text-gray-600 mt-2">Manage your wedding guests and RSVPs</p>
         </div>
-        <Button onClick={handleAddGuest} className="mt-4 sm:mt-0">
-          <ApperIcon name="Plus" className="w-4 h-4 mr-2" />
-          Add Guest
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-3 mt-4 sm:mt-0">
+          <Button 
+            onClick={handleSeatingChart} 
+            variant="secondary"
+            className="order-2 sm:order-1"
+          >
+            <ApperIcon name="Layout" className="w-4 h-4 mr-2" />
+            Seating Chart
+          </Button>
+          <Button onClick={handleAddGuest} className="order-1 sm:order-2">
+            <ApperIcon name="Plus" className="w-4 h-4 mr-2" />
+            Add Guest
+          </Button>
+        </div>
       </div>
       
       {guests.length === 0 ? (

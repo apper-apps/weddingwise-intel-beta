@@ -1,0 +1,55 @@
+{
+  "tables": [
+    {
+      "Id": 1,
+      "number": 1,
+      "x": 200,
+      "y": 150,
+      "width": 120,
+      "height": 120,
+      "shape": "round",
+      "capacity": 8
+    },
+    {
+      "Id": 2,
+      "number": 2,
+      "x": 400,
+      "y": 150,
+      "width": 120,
+      "height": 120,
+      "shape": "round",
+      "capacity": 8
+    },
+    {
+      "Id": 3,
+      "number": 3,
+      "x": 600,
+      "y": 150,
+      "width": 120,
+      "height": 120,
+      "shape": "round",
+      "capacity": 8
+    },
+    {
+      "Id": 4,
+      "number": 4,
+      "x": 300,
+      "y": 350,
+      "width": 150,
+      "height": 80,
+      "shape": "rectangle",
+      "capacity": 6
+    },
+    {
+      "Id": 5,
+      "number": 5,
+      "x": 500,
+      "y": 350,
+      "width": 150,
+      "height": 80,
+      "shape": "rectangle",
+      "capacity": 6
+    }
+  ],
+  "unassignedGuests": []
+}
